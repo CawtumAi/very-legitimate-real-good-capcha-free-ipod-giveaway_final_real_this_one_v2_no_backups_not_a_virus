@@ -1,0 +1,234 @@
+[gd_scene load_steps=24 format=3 uid="uid://myhc7ej4hdjg"]
+
+[ext_resource type="Script" uid="uid://dyk33ufy0xyxf" path="res://exporter.gd" id="1_qulpo"]
+[ext_resource type="Script" uid="uid://cpqk63s5qu7kw" path="res://node_2d.gd" id="2_jifot"]
+[ext_resource type="PackedScene" uid="uid://lb1jpc2e0tau" path="res://windmill.tscn" id="3_3opl0"]
+[ext_resource type="PackedScene" uid="uid://bo3jxh8t8fy1e" path="res://ball.tscn" id="4_dc5vx"]
+[ext_resource type="Script" uid="uid://b5aw1re4rqml0" path="res://gravity_field.gd" id="5_s8oj7"]
+[ext_resource type="PackedScene" uid="uid://bnb5cax5a4g50" path="res://critters/chicken.tscn" id="6_mw4xc"]
+[ext_resource type="PackedScene" uid="uid://h23sqhql40r5" path="res://critters/elephant.tscn" id="7_r8rrl"]
+[ext_resource type="PackedScene" uid="uid://boi00b6jmpni8" path="res://push_controller.tscn" id="8_lwvnx"]
+[ext_resource type="PackedScene" uid="uid://cyldtt4qlfavk" path="res://door.tscn" id="9_4ou0f"]
+[ext_resource type="PackedScene" uid="uid://cyeogew2fl6ho" path="res://critters/frog.tscn" id="10_jifot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u52ul"]
+size = Vector2(133, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
+size = Vector2(133, 82.9796)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oi3di"]
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oi3di"]
+radius = 16.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vonw3"]
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f2txt"]
+radius = 21.0238
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0b4ue"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u52ul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
+size = Vector2(390, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b4ue"]
+size = Vector2(100, 500)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2txt"]
+size = Vector2(83, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n6hdu"]
+radius = 31.257
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ainy"]
+size = Vector2(20, 41)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qulpo")
+path = "../src/levels/meow.js"
+field_name = "level"
+metadata/_custom_type_script = "uid://dyk33ufy0xyxf"
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(254, 230)
+rotation = -0.657422
+shape = SubResource("RectangleShape2D_u52ul")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(294.841, 75.8863)
+rotation = -2.09183
+shape = SubResource("RectangleShape2D_vonw3")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(229, 238)
+physics_material_override = SubResource("PhysicsMaterial_oi3di")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-191, -24)
+shape = SubResource("CircleShape2D_oi3di")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(36, 50)
+collision_layer = 2
+collision_mask = 2
+physics_material_override = SubResource("PhysicsMaterial_vonw3")
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(316, -15)
+shape = SubResource("CircleShape2D_f2txt")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(80, 93)
+collision_layer = 2
+collision_mask = 2
+physics_material_override = SubResource("PhysicsMaterial_vonw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+shape = SubResource("CircleShape2D_oi3di")
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+position = Vector2(65, 162)
+collision_layer = 2
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_vonw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
+shape = SubResource("CircleShape2D_oi3di")
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+position = Vector2(76, 201)
+collision_layer = 2
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_vonw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5"]
+shape = SubResource("CircleShape2D_oi3di")
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="."]
+position = Vector2(70, 31)
+collision_layer = 2
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_vonw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6"]
+shape = SubResource("CircleShape2D_0b4ue")
+
+[node name="RigidBody2D7" type="RigidBody2D" parent="."]
+position = Vector2(79, 265)
+collision_layer = 2
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_vonw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D7"]
+shape = SubResource("CircleShape2D_oi3di")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(230, 267)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_u52ul")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_jifot")
+metadata/_custom_type_script = "uid://cpqk63s5qu7kw"
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(36, 135)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(195, 150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(0, 200)
+shape = SubResource("RectangleShape2D_oi3di")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(245, 0)
+shape = SubResource("RectangleShape2D_0b4ue")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-245, 0)
+shape = SubResource("RectangleShape2D_0b4ue")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(0, -200)
+shape = SubResource("RectangleShape2D_oi3di")
+metadata/_edit_lock_ = true
+
+[node name="RigidBody2D8" type="RigidBody2D" parent="."]
+position = Vector2(65, 162)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D8"]
+position = Vector2(101, -148)
+shape = SubResource("RectangleShape2D_f2txt")
+
+[node name="Windmill" parent="." instance=ExtResource("3_3opl0")]
+position = Vector2(135, 103)
+
+[node name="Windmill2" parent="." instance=ExtResource("3_3opl0")]
+position = Vector2(97, 144)
+
+[node name="Ball" parent="." instance=ExtResource("4_dc5vx")]
+position = Vector2(349, 242)
+
+[node name="Ball2" parent="." instance=ExtResource("4_dc5vx")]
+position = Vector2(317, 273)
+
+[node name="Ball6" parent="." instance=ExtResource("4_dc5vx")]
+position = Vector2(21, 67)
+
+[node name="Ball3" parent="." instance=ExtResource("4_dc5vx")]
+position = Vector2(350, 271)
+
+[node name="Ball4" parent="." instance=ExtResource("4_dc5vx")]
+position = Vector2(376, 278)
+
+[node name="Ball5" parent="." instance=ExtResource("4_dc5vx")]
+position = Vector2(370, 219)
+
+[node name="GravityField" type="Area2D" parent="." node_paths=PackedStringArray("direction")]
+position = Vector2(194, 74)
+script = ExtResource("5_s8oj7")
+direction = NodePath("Node2D")
+metadata/_custom_type_script = "uid://b5aw1re4rqml0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GravityField"]
+shape = SubResource("CircleShape2D_n6hdu")
+
+[node name="Node2D" type="Node2D" parent="GravityField"]
+position = Vector2(41, -51)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="GravityField"]
+position = Vector2(36, 55.5)
+shape = SubResource("RectangleShape2D_1ainy")
+
+[node name="Chicken" parent="." instance=ExtResource("6_mw4xc")]
+position = Vector2(260, 169)
+
+[node name="Elephant" parent="." instance=ExtResource("7_r8rrl")]
+position = Vector2(354, 159)
+
+[node name="PushController" parent="." instance=ExtResource("8_lwvnx")]
+
+[node name="Door" parent="." instance=ExtResource("9_4ou0f")]
+position = Vector2(115, 219)
+rotation = -0.150073
+
+[node name="Frog" parent="." instance=ExtResource("10_jifot")]
+position = Vector2(167, 173)

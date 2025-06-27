@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkgukcyh4j7be"]
+
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_lmnmh"]
+[ext_resource type="Texture2D" uid="uid://mkpfegxtimhy" path="res://images/giraffe.svg" id="1_wb00u"]
+
+[node name="Giraffe" type="RigidBody2D"]
+script = ExtResource("1_lmnmh")
+type = "giraffe"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Giraffe" type="Sprite2D" parent="."]
+texture = ExtResource("1_wb00u")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(9, -21, 0, -23, -9, -21, -8, -11, -17, -13, -21, -6, -17, -1, -16, 13, -7, 22, 7, 22, 16, 13, 17, -1, 21, -7, 16, -13, 8, -11)

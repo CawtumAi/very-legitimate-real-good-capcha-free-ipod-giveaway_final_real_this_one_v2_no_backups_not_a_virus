@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://h23sqhql40r5"]
+
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_c7j7g"]
+[ext_resource type="Texture2D" uid="uid://rppj3byymsh0" path="res://images/elephant.svg" id="1_ensra"]
+
+[node name="Elephant" type="RigidBody2D"]
+script = ExtResource("1_c7j7g")
+type = "elephant"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Elephant" type="Sprite2D" parent="."]
+texture = ExtResource("1_ensra")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1, -21, -9, -19, -17, -20, -24, -10, -22, 0, -13, 8, -11, 17, -3, 21, 3, 21, 11, 17, 13, 9, 23, -2, 24, -11, 16, -20)

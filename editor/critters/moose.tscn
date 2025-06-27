@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwufh0ddcsjte"]
+
+[ext_resource type="Texture2D" uid="uid://ba8wtfxjfdiqi" path="res://images/moose.svg" id="1_c0xwx"]
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_uq2hh"]
+
+[node name="Moose" type="RigidBody2D"]
+script = ExtResource("1_uq2hh")
+type = "moose"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Moose" type="Sprite2D" parent="."]
+texture = ExtResource("1_c0xwx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-14, -9, -33.5, -22.5, -36, -17, -34, -7, -26, 0, -17, 2, -16, 13, -6, 21, 5, 22, 14, 16, 18, 3, 26, 1, 35, -9, 36, -16, 33.5, -22.4, 13, -9, 4.5, -15.8, -4, -16)

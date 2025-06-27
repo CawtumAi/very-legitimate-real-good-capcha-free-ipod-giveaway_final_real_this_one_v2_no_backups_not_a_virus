@@ -1,0 +1,52 @@
+[gd_scene load_steps=16 format=3 uid="uid://c2e7qa7rg1wjm"]
+
+[ext_resource type="PackedScene" uid="uid://bemlqqlb6qpmq" path="res://critters/bear.tscn" id="1_prv70"]
+[ext_resource type="Script" uid="uid://dyk33ufy0xyxf" path="res://exporter.gd" id="1_xmuho"]
+[ext_resource type="PackedScene" uid="uid://bnb5cax5a4g50" path="res://critters/chicken.tscn" id="2_h876t"]
+[ext_resource type="PackedScene" uid="uid://hixl8lt7vatq" path="res://critters/cow.tscn" id="3_nijv1"]
+[ext_resource type="PackedScene" uid="uid://h23sqhql40r5" path="res://critters/elephant.tscn" id="4_0evv3"]
+[ext_resource type="PackedScene" uid="uid://cyeogew2fl6ho" path="res://critters/frog.tscn" id="5_4go8l"]
+[ext_resource type="PackedScene" uid="uid://bkgukcyh4j7be" path="res://critters/giraffe.tscn" id="6_gi37m"]
+[ext_resource type="PackedScene" uid="uid://dvhehtks4so6a" path="res://critters/goat.tscn" id="7_esdo0"]
+[ext_resource type="PackedScene" uid="uid://b7rlxlp0f3yx8" path="res://critters/monkey.tscn" id="8_es5vr"]
+[ext_resource type="PackedScene" uid="uid://cwufh0ddcsjte" path="res://critters/moose.tscn" id="9_d7oks"]
+[ext_resource type="PackedScene" uid="uid://c586v60yu6drs" path="res://critters/panda.tscn" id="10_qq0ev"]
+[ext_resource type="PackedScene" uid="uid://brbn13rus1x0w" path="res://critters/pig.tscn" id="11_fat5p"]
+[ext_resource type="PackedScene" uid="uid://do3dpc8ump1x2" path="res://critters/rabbit.tscn" id="12_mdfya"]
+[ext_resource type="PackedScene" uid="uid://gfv6hsppjtsm" path="res://critters/whale.tscn" id="13_k7fg0"]
+[ext_resource type="PackedScene" uid="uid://bvap0qptnh641" path="res://critters/wolf.tscn" id="14_8whge"]
+
+[node name="Entities" type="Node2D"]
+script = ExtResource("1_xmuho")
+path = "../src/critters.js"
+field_name = "critterDefs"
+export_entity_data = true
+metadata/_custom_type_script = "uid://dyk33ufy0xyxf"
+
+[node name="Bear" parent="." instance=ExtResource("1_prv70")]
+
+[node name="Chicken" parent="." instance=ExtResource("2_h876t")]
+
+[node name="Cow" parent="." instance=ExtResource("3_nijv1")]
+
+[node name="Elephant" parent="." instance=ExtResource("4_0evv3")]
+
+[node name="Frog" parent="." instance=ExtResource("5_4go8l")]
+
+[node name="Giraffe" parent="." instance=ExtResource("6_gi37m")]
+
+[node name="Goat" parent="." instance=ExtResource("7_esdo0")]
+
+[node name="Monkey" parent="." instance=ExtResource("8_es5vr")]
+
+[node name="Moose" parent="." instance=ExtResource("9_d7oks")]
+
+[node name="Panda" parent="." instance=ExtResource("10_qq0ev")]
+
+[node name="Pig" parent="." instance=ExtResource("11_fat5p")]
+
+[node name="Rabbit" parent="." instance=ExtResource("12_mdfya")]
+
+[node name="Whale" parent="." instance=ExtResource("13_k7fg0")]
+
+[node name="Wolf" parent="." instance=ExtResource("14_8whge")]

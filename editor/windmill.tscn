@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://lb1jpc2e0tau"]
+
+[ext_resource type="Script" uid="uid://b4o7sjsjlwlqv" path="res://windmill.gd" id="1_0jr3m"]
+[ext_resource type="Script" uid="uid://dl101554gq2um" path="res://Pin.gd" id="2_aeunn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jr3m"]
+size = Vector2(10, 30)
+
+[node name="Windmill" type="Node2D"]
+script = ExtResource("1_0jr3m")
+metadata/_custom_type_script = "uid://b4o7sjsjlwlqv"
+
+[node name="Body" type="RigidBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+mass = 32.176
+constant_torque = 0.07
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+shape = SubResource("RectangleShape2D_0jr3m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Body"]
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_0jr3m")
+
+[node name="Pin" type="Node2D" parent="." node_paths=PackedStringArray("target")]
+script = ExtResource("2_aeunn")
+target = NodePath("../Body")
+metadata/_custom_type_script = "uid://dl101554gq2um"

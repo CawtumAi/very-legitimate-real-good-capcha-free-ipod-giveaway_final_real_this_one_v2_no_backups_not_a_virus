@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c586v60yu6drs"]
+
+[ext_resource type="Texture2D" uid="uid://0q2yqjrul8m4" path="res://images/panda.svg" id="1_5sycd"]
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_cscpv"]
+
+[node name="Panda" type="RigidBody2D"]
+script = ExtResource("1_cscpv")
+type = "panda"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Panda" type="Sprite2D" parent="."]
+texture = ExtResource("1_5sycd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(12, -13, 6, -16, -6, -16, -12, -13, -19, -14, -23, -9, -24, -2, -17, 5, -13, 13, -6, 17, 6, 17, 13, 12, 18, 3, 24, -4, 23, -9, 18, -14)

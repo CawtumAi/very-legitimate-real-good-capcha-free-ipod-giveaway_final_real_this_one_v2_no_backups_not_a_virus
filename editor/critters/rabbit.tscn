@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://do3dpc8ump1x2"]
+
+[ext_resource type="Texture2D" uid="uid://7wlxk56wsb8h" path="res://images/rabbit.svg" id="1_o2bl5"]
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_yhixi"]
+
+[node name="Rabbit" type="RigidBody2D"]
+script = ExtResource("1_yhixi")
+type = "rabbit"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Rabbit" type="Sprite2D" parent="."]
+texture = ExtResource("1_o2bl5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, -22, -13, -6, -17, 1, -16, 13, -6, 22, 6, 22, 16, 13, 17, 2, 12, -6, 12, -22, 8, -21, 0, -11, -7, -21)

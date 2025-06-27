@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://brbn13rus1x0w"]
+
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_o62jd"]
+[ext_resource type="Texture2D" uid="uid://b5dnui3tbxw65" path="res://images/pig.svg" id="1_q716u"]
+
+[node name="Pig" type="RigidBody2D"]
+script = ExtResource("1_o62jd")
+type = "pig"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Pig" type="Sprite2D" parent="."]
+texture = ExtResource("1_q716u")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(18, -2, 20, -8, 17, -16, 10, -15, 0, -18, -9, -14, -18, -16, -20, -7, -18, -1, -16, 9, -6, 18, 6, 18, 16, 9)

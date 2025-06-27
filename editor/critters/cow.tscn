@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://hixl8lt7vatq"]
+
+[ext_resource type="Texture2D" uid="uid://brq3vvqym7nba" path="res://images/cow.svg" id="1_jhnxw"]
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_yuong"]
+
+[node name="Cow" type="RigidBody2D"]
+script = ExtResource("1_yuong")
+type = "cow"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Cow" type="Sprite2D" parent="."]
+texture = ExtResource("1_jhnxw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(15, -18, 0, -19, -15, -18, -20, -15, -16, -7, -17, 1, -12, 13, 0, 18, 12, 12, 17, 1, 16, -8, 20, -15)

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://boi00b6jmpni8"]
+
+[ext_resource type="Script" uid="uid://bo43uk5nda80" path="res://push_controller.gd" id="1_swvt4"]
+[ext_resource type="Script" uid="uid://bupohfumg5dlv" path="res://gravity_well.gd" id="2_thxbn"]
+
+[node name="PushController" type="Node"]
+script = ExtResource("1_swvt4")
+metadata/_custom_type_script = "uid://bo43uk5nda80"
+
+[node name="Touch" type="Area2D" parent="."]
+script = ExtResource("2_thxbn")
+speed = 1.0
+metadata/_custom_type_script = "uid://bupohfumg5dlv"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Touch"]
+polygon = PackedVector2Array(-20, -40, 20, -40, 40, -20, 40, 20, 20, 40, -20, 40, -40, 20, -40, -20)
+
+[node name="Mouse" type="Area2D" parent="."]
+script = ExtResource("2_thxbn")
+speed = 1.0
+metadata/_custom_type_script = "uid://bupohfumg5dlv"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mouse"]
+polygon = PackedVector2Array(-10, -20, 10, -20, 20, -10, 20, 10, 10, 20, -10, 20, -20, 10, -20, -10)

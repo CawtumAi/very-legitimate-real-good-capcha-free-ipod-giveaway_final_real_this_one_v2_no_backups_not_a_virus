@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvhehtks4so6a"]
+
+[ext_resource type="Texture2D" uid="uid://dt4rnm8bttmr3" path="res://images/goat.svg" id="1_8n10x"]
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_mevn1"]
+
+[node name="Goat" type="RigidBody2D"]
+script = ExtResource("1_mevn1")
+type = "goat"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Goat" type="Sprite2D" parent="."]
+texture = ExtResource("1_8n10x")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(16, -23, 6, -15, -6, -15, -16, -23, -13, -10, -25, -9, -24, -3, -18, 0, -15, 10, -6, 17, -3, 22, 3, 22, 6, 17, 15, 10, 18, 0, 24, -3, 25, -9, 13, -10)

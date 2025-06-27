@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnb5cax5a4g50"]
+
+[ext_resource type="Texture2D" uid="uid://dun1hn1wrd6f6" path="res://images/chicken.svg" id="1_28qk5"]
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_r70k4"]
+
+[node name="Chicken" type="RigidBody2D"]
+script = ExtResource("1_r70k4")
+type = "chicken"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Chicken" type="Sprite2D" parent="."]
+texture = ExtResource("1_28qk5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-3, -20, -7, -14, -13, -10, -17, -2, -16, 10, -8, 18, 0, 20, 9, 18, 16, 10, 17, -3, 13, -10, 7, -14, 4, -20)

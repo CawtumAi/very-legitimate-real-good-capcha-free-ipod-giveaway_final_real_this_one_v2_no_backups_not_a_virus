@@ -1,0 +1,1 @@
+class_name CritterSpawner extends Node2D

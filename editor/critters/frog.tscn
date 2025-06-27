@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyeogew2fl6ho"]
+
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_7lomg"]
+[ext_resource type="Texture2D" uid="uid://cv4a0mp3bur4u" path="res://images/frog.svg" id="1_eff0w"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7lomg"]
+bounce = 1.0
+
+[node name="Frog" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_7lomg")
+script = ExtResource("1_7lomg")
+type = "frog"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Frog" type="Sprite2D" parent="."]
+texture = ExtResource("1_eff0w")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-4.6, -20, -12, -18, -13, -11, -17, -7, -19, 3, -13, 18, 12, 18, 19, 3, 18, -7, 13, -10, 12, -18, 5, -20, 0, -14)

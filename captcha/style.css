@@ -1,0 +1,25 @@
+body {
+  overflow: hidden;
+}
+
+.icon-button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 32);
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beveled {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: yellow;
+  width: 100%;
+  text-shadow: 1px 1px 0 #444, /* bottom right light */ -1px -1px 0 #fff; /* top left dark */
+}

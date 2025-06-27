@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvap0qptnh641"]
+
+[ext_resource type="Script" uid="uid://b8he5gwmb75ku" path="res://critter.gd" id="1_1s7uv"]
+[ext_resource type="Texture2D" uid="uid://ce1mftatcukr3" path="res://images/wolf.svg" id="1_gjnlc"]
+
+[node name="Wolf" type="RigidBody2D"]
+script = ExtResource("1_1s7uv")
+type = "wolf"
+metadata/_custom_type_script = "uid://b8he5gwmb75ku"
+
+[node name="Wolf" type="Sprite2D" parent="."]
+texture = ExtResource("1_gjnlc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-15, -7, -18, 9, -7, 21, 7, 21, 18, 9, 15, -7, 13, -22, 6, -13, -6, -13, -13, -22)

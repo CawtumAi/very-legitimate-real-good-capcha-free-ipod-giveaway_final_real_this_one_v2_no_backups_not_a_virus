@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://0puvsn2ulf2l"]
+
+[ext_resource type="Script" uid="uid://dtvd7doopevpc" path="res://death_door.gd" id="1_2wnoa"]
+[ext_resource type="Texture2D" uid="uid://ceyd7v840twt8" path="res://images/door.svg" id="2_lnn87"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0phs7"]
+
+[node name="DeathDoor" type="Area2D"]
+script = ExtResource("1_2wnoa")
+metadata/_custom_type_script = "uid://ofmfbh1lc6q3"
+
+[node name="Door" type="Sprite2D" parent="."]
+texture = ExtResource("2_lnn87")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0phs7")
